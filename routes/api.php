@@ -13,6 +13,19 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::resource('Ciudad', 'CiudadController');
+Route::resource('Articulo', 'ArticuloController');
+Route::resource('Cliente', 'ClienteController');
+Route::resource('DireccionEnvio', 'DireccionEnvioController');
+Route::resource('Locacion', 'LocacionController');
+Route::resource('Pedido', 'PedidoController');
+Route::resource('Articulo.Pedido', 'ArticuloPedidoController', ['only' => ['index']]);
+Route::resource('Ciudad.DireccionEnvio', 'CiudadDireccionEnvioController', ['only' => ['index']]);
+Route::resource('Cliente.DireccionEnvio', 'ClienteDireccionEnvioController', ['only' => ['index']]);
+Route::resource('DireccionEnvio.Locacion', 'DireccionEnvioLocacionController', ['only' => ['index']]);
+Route::resource('DireccionEnvio.Pedido', 'DireccionEnvioPedidoController', ['only' => ['index']]);
+Route::resource('Pedido.Articulo', 'PedidoArticuloController', ['only' => ['index']]);
+
+
+
+

@@ -18,7 +18,7 @@ class CreatePedidosTable extends Migration
             $table->DateTime('fechaPedido');
             $table->unsignedBigInteger('direccionEnvio_id');
             $table->timestamps();
-            $table->foreign('direccionEnvio_id')->references('id')->on('direccionEnvios');
+            $table->foreign('direccionEnvio_id')->references('id')->on('direccion_envios');
         });
     }
 
