@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\pedido;
+use App\Pedido;
 use Illuminate\Http\Request;
 
 class pedidoController extends Controller
@@ -14,7 +14,7 @@ class pedidoController extends Controller
      */
     public function index()
     {
-         $pedidos = pedido::all();
+         $pedidos = Pedido::all();
         return $this->successResponse( $pedidos);
     }
 
