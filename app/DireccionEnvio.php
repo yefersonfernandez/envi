@@ -15,6 +15,7 @@ class Direccionenvio extends Model
         'ciudad_id',
         'cliente_id'
     ];
+    
 
     public function rela_Ciudad()
     {
