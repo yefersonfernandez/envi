@@ -8,8 +8,9 @@ use App\Cliente;
 
 class ClienteDireccionenvioController extends Controller
 {
-    public function index(Cliente $cliente)
+    public function index($id)
     {
+        $cliente=Cliente::findOrfail($id);
         $Direccionenvio = $cliente->rela_Direccionenvio;
         return $this->successResponse($Direccionenvio);
     }

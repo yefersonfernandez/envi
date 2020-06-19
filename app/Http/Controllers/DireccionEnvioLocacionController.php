@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 
 class DireccionenvioLocacionController extends Controller
 {
-    public function index(Direccionenvio $Direccionenvio)
+    public function index($id)
     {
+        $Direccionenvio=Direccionenvio::findOrfail($id);
         $locacion = $Direccionenvio->rela_Locacion;
         return $this->successResponse($locacion);
     }

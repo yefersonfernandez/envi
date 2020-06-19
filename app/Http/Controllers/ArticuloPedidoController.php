@@ -7,9 +7,10 @@ use App\Articulo;
 
 class ArticuloPedidoController extends Controller
 {
-    public function index(Articulo $articulo)
+    public function index($id)
     {
-        $pedido = $articulo->rela_Pedido();
+        $articulo=Articulo::findOrfail($id);
+        $pedido = $articulo->rela_Pedido;
         return $this->successResponse($pedido);
     }
 }

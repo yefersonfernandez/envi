@@ -7,8 +7,9 @@ use App\Pedido;
 
 class PedidoArticuloController extends Controller
 {
-    public function index(Pedido $pedido)
+    public function index($id)
     {
+        $pedido=Pedido::findOrfail($id);
         $articulo = $pedido->rela_Articulo;
         return $this->successResponse($articulo);
     }
