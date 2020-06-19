@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 use App\Cliente;
 
 
-class ClienteDireccionEnvioController extends Controller
+class ClienteDireccionenvioController extends Controller
 {
     public function index(Cliente $cliente)
     {
-        $direccionEnvio = $cliente->rela_DireccionEnvio();
-        return $this->successResponse($direccionEnvio);
+        $Direccionenvio = $cliente->rela_Direccionenvio;
+        return $this->successResponse($Direccionenvio);
     }
 }

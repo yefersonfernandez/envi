@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDireccionEnviosTable extends Migration
+class CreateDireccionenviosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDireccionEnviosTable extends Migration
      */
     public function up()
     {
-        Schema::create('direccion_envios', function (Blueprint $table) {
+        Schema::create('Direccionenvios', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('descripcion');
             $table->unsignedBigInteger('ciudad_id');
@@ -31,6 +31,6 @@ class CreateDireccionEnviosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('direccion_envios');
+        Schema::dropIfExists('Direccionenvios');
     }
 }

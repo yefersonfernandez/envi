@@ -29,7 +29,7 @@ class LocacionController extends Controller
         $rules = [
             'longitud' => 'required',
             'latitud' => 'required',
-            'direccionEnvio_id' => 'required'
+            'Direccionenvio_id' => 'required'
         ];
         $this->validate($request,$rules);
         

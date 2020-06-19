@@ -9,7 +9,7 @@ class PedidoArticuloController extends Controller
 {
     public function index(Pedido $pedido)
     {
-        $articulo = $pedido->rela_Articulo();
+        $articulo = $pedido->rela_Articulo;
         return $this->successResponse($articulo);
     }
 }

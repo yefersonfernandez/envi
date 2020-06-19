@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-use App\DireccionEnvio;
+use App\Direccionenvio;
 use App\Articulo;
 
 use Illuminate\Database\Eloquent\Model;
@@ -11,13 +11,13 @@ class Pedido extends Model
     protected $fillable = [
         'id',
         'fechaPedido',
-        'direccionEnvio_id'
+        'Direccionenvio_id'
     ];
 
-    public function rela_DireccionEnvio()
+    public function rela_Direccionenvio()
     {
 
-        return $this->belongsTo(DireccionEnvio::class);
+        return $this->belongsTo(Direccionenvio::class);
     }
     public function rela_Articulo()
     {

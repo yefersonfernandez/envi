@@ -1,15 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\DireccionEnvio;
+use App\Direccionenvio;
 
 use Illuminate\Http\Request;
 
-class DireccionEnvioLocacionController extends Controller
+class DireccionenvioLocacionController extends Controller
 {
-    public function index(DireccionEnvio $direccionEnvio)
+    public function index(Direccionenvio $Direccionenvio)
     {
-        $locacion = $direccionEnvio->rela_Locacion();
+        $locacion = $Direccionenvio->rela_Locacion;
         return $this->successResponse($locacion);
     }
 }

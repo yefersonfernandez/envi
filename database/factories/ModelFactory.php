@@ -39,7 +39,7 @@ $factory->define(App\Articulo::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\DireccionEnvio::class, function (Faker\Generator $faker) {
+$factory->define(App\Direccionenvio::class, function (Faker\Generator $faker) {
 
     return [
         'descripcion' => $faker->address(),
@@ -53,7 +53,7 @@ $factory->define(App\Locacion::class, function (Faker\Generator $faker) {
     return [
         'longitud' => $faker->latitude($min = -90, $max = 90),
         'latitud' => $faker->longitude($min = -180, $max = 180),
-        'direccionEnvio_id' => App\DireccionEnvio::inRandomOrder()->first()->id,
+        'direccionenvio_id' => App\Direccionenvio::inRandomOrder()->first()->id,
     ];
 });
 
@@ -61,6 +61,6 @@ $factory->define(App\Pedido::class, function (Faker\Generator $faker) {
 
     return [
         'fechaPedido' => $faker->dateTime($max = 'now', $timezone = null),
-        'direccionEnvio_id' => App\DireccionEnvio::inRandomOrder()->first()->id,
+        'direccionenvio_id' => App\Direccionenvio::inRandomOrder()->first()->id,
     ];
 });

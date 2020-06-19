@@ -3,7 +3,7 @@ use Illuminate\Database\Seeder;
 use App\Articulo;
 use App\Ciudad;
 use App\Cliente;
-use App\DireccionEnvio;
+use App\Direccionenvio;
 use App\Locacion;
 use App\Pedido;
 use Illuminate\Support\Facades\DB;
@@ -22,13 +22,13 @@ class DatabaseSeeder extends Seeder
         Ciudad::truncate();
         Cliente::truncate();
         Articulo::truncate();
-        DireccionEnvio::truncate();
+        Direccionenvio::truncate();
         Locacion::truncate();
         Pedido::truncate();
         factory(Ciudad::class,10)->create();//200
         factory(Cliente::class,10)->create();//200
         factory(Articulo::class,10)->create();//200
-        factory(DireccionEnvio::class,10)->create();
+        factory(Direccionenvio::class,10)->create();
         factory(Locacion::class,100)->create();
         factory(Pedido::class,10)->create()->each(//30
             function ($pedido){

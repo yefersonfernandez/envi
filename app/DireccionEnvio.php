@@ -7,7 +7,7 @@ use App\Locacion;
 
 use Illuminate\Database\Eloquent\Model;
 
-class DireccionEnvio extends Model
+class Direccionenvio extends Model
 {
     protected $fillable = [
         'id',

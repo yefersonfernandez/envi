@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-use App\DireccionEnvio;
+use App\Direccionenvio;
 use Illuminate\Database\Eloquent\Model;
 
 class Cliente extends Model
@@ -13,9 +13,9 @@ class Cliente extends Model
         'telefono'
     ];
 
-    public function rela_DireccionEnvio()
+    public function rela_Direccionenvio()
     {
 
-        return $this->hasMany(DireccionEnvio::class);
+        return $this->hasMany(Direccionenvio::class);
     }
 }

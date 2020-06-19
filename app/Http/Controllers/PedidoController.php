@@ -28,7 +28,7 @@ class pedidoController extends Controller
     {
         $rules = [
             'fechaPedido' => 'required',
-            'direccionEnvio_id' => 'required'
+            'Direccionenvio_id' => 'required'
         ];
         $this->validate($request,$rules);
         

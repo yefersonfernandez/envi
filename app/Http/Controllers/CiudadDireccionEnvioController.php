@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 use App\Ciudad;
 
 
-class CiudadDireccionEnvioController extends Controller
+class CiudadDireccionenvioController extends Controller
 {
     public function index($id)
     {
         $ciudad=Ciudad::findOrfail($id);
-        $direccionEnvio = $ciudad->rela_DireccionEnvio();
-        return $this->successResponse($direccionEnvio);
+        $Direccionenvio = $ciudad->rela_Direccionenvio;
+        return $this->successResponse($Direccionenvio);
     }
 }

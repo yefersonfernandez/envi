@@ -10,13 +10,13 @@ class Locacion extends Model
         'id',
         'longitud',
         'latitud',
-        'direccionEnvio_id'
+        'Direccionenvio_id'
     ];
 
-    public function rela_DireccionEnvio()
+    public function rela_Direccionenvio()
     {
 
-        return $this->belongsTo(DireccionEnvio::class);
+        return $this->belongsTo(Direccionenvio::class);
     }
 
 }

@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\DireccionEnvio;
+use App\Direccionenvio;
 
-class DireccionEnvioPedidoController extends Controller
+class DireccionenvioPedidoController extends Controller
 {
-    public function index(DireccionEnvio $direccionEnvio)
+    public function index(Direccionenvio $Direccionenvio)
     {
-        $pedido = $direccionEnvio->rela_Pedido();
+        $pedido = $Direccionenvio->rela_Pedido;
         return $this->successResponse($pedido);
     }
 }

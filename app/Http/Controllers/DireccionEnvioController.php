@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\DireccionEnvio;
+use App\Direccionenvio;
 use Illuminate\Http\Request;
 
-class DireccionEnvioController extends Controller
+class DireccionenvioController extends Controller
 {
     /**
      * Display a listing of the resource.                                                      
@@ -14,8 +14,8 @@ class DireccionEnvioController extends Controller
      */
     public function index()
     {
-         $direccionEnvios = DireccionEnvio::all();
-         return $this->successResponse($direccionEnvios);
+         $Direccionenvios = Direccionenvio::all();
+         return $this->successResponse($Direccionenvios);
     }
 
     /**
@@ -35,27 +35,27 @@ class DireccionEnvioController extends Controller
         
         $campos = $request->all();
         //dd($campos);
-        $DireccionEnvio = DireccionEnvio::create($campos);
-        return $this->successResponse($DireccionEnvio);
+        $Direccionenvio = Direccionenvio::create($campos);
+        return $this->successResponse($Direccionenvio);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\DireccionEnvio  $DireccionEnvio
+     * @param  \App\Direccionenvio  $Direccionenvio
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $DireccionEnvio = DireccionEnvio::findOrFail($id);
-        return $DireccionEnvio;
+        $Direccionenvio = Direccionenvio::findOrFail($id);
+        return $Direccionenvio;
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\DireccionEnvio  $DireccionEnvio
+     * @param  \App\Direccionenvio  $Direccionenvio
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -65,29 +65,29 @@ class DireccionEnvioController extends Controller
         ];
         //dd($request);
         $this->validate($request,$rules);
-        $direccionEnvio = DireccionEnvio::findOrFail($id);
-        $direccionEnvio->fill($request->all());
+        $Direccionenvio = Direccionenvio::findOrFail($id);
+        $Direccionenvio->fill($request->all());
         
 
         //dd($request);
-        if($direccionEnvio->isClean()){
+        if($Direccionenvio->isClean()){
             return response()->json("No se hicieron cambios",422);
         }
 
-        $direccionEnvio->save();
+        $Direccionenvio->save();
         
-        return $this->successResponse($direccionEnvio);
+        return $this->successResponse($Direccionenvio);
     }
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\DireccionEnvio  $DireccionEnvio
+     * @param  \App\Direccionenvio  $Direccionenvio
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $direccionEnvio = DireccionEnvio::findOrFail($id);
-        $direccionEnvio->delete();
-        return $this->successResponse($direccionEnvio);
+        $Direccionenvio = Direccionenvio::findOrFail($id);
+        $Direccionenvio->delete();
+        return $this->successResponse($Direccionenvio);
     }
 }
