@@ -19,7 +19,7 @@ class CreateLocacionsTable extends Migration
             $table->integer('latitud');
             $table->unsignedBigInteger('Direccionenvio_id');
             $table->timestamps();
-            $table->foreign('Direccionenvio_id')->references('id')->on('Direccionenvios');
+            $table->foreign('Direccionenvio_id')->references('id')->on('direccionenvios');
         });
     }
 

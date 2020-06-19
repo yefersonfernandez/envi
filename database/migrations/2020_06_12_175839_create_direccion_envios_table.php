@@ -13,7 +13,7 @@ class CreateDireccionenviosTable extends Migration
      */
     public function up()
     {
-        Schema::create('Direccionenvios', function (Blueprint $table) {
+        Schema::create('direccionenvios', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('descripcion');
             $table->unsignedBigInteger('ciudad_id');
