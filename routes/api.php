@@ -22,6 +22,7 @@ Route::resource('Pedido', 'PedidoController');
 Route::resource('Articulo.Pedido', 'ArticuloPedidoController', ['only' => ['index']]);
 Route::resource('Ciudad.DireccionEnvio', 'CiudadDireccionEnvioController', ['only' => ['index']]);
 Route::resource('Cliente.DireccionEnvio', 'ClienteDireccionEnvioController', ['only' => ['index']]);
+
 Route::resource('DireccionEnvio.Locacion', 'DireccionEnvioLocacionController', ['only' => ['index']]);
 Route::resource('DireccionEnvio.Pedido', 'DireccionEnvioPedidoController', ['only' => ['index']]);
 Route::resource('Pedido.Articulo', 'PedidoArticuloController', ['only' => ['index']]);
