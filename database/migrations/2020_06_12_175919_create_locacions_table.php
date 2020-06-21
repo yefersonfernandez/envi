@@ -15,8 +15,8 @@ class CreateLocacionsTable extends Migration
     {
         Schema::create('locacions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('longitud');
-            $table->integer('latitud');
+            $table->float('longitud');
+            $table->float('latitud');
             $table->unsignedBigInteger('Direccionenvio_id');
             $table->timestamps();
             $table->foreign('Direccionenvio_id')->references('id')->on('direccionenvios');
